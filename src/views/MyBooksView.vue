@@ -242,9 +242,7 @@
 </template>
 
 <script>
-import axios from 'axios';
-
-axios.defaults.baseURL = 'http://localhost:8081'; // 기본 API 주소 설정
+import axios from '@/axios';
 
 export default {
   name: "MyBooksView",

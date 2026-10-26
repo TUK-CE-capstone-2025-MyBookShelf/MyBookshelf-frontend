@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from '@/axios';
 
 export default {
   name: 'CategoryView',
@@ -50,7 +50,7 @@ export default {
   methods: {
     // 카테고리 목록을 가져오는 API 호출
     fetchCategories() {
-      axios.get('http://localhost:8081/api/categories')
+      axios.get('/api/categories')
         .then(response => {
           this.categories = response.data.categories;
           if (this.categories.length) {
@@ -71,7 +71,7 @@ export default {
 
     // 선택된 카테고리에 해당하는 도서 목록을 가져오는 API 호출
     fetchBooksByCategory(categoryId) {
-      axios.get(`http://localhost:8081/api/books?category=${categoryId}`)
+      axios.get(`/api/books?category=${categoryId}`)
         .then(response => {
           this.books = response.data.books;
         })

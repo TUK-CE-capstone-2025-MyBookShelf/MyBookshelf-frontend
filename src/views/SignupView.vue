@@ -118,9 +118,7 @@
 </template>
 
 <script>
-import axios from "axios"; // axios import 추가
-
-axios.defaults.baseURL = 'http://localhost:8081'; // Spring Boot 서버 주소
+import axios from '@/axios';
 
 export default {
   name: "SignupView",

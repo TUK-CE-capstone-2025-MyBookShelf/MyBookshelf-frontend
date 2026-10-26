@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from '@/axios';
 import ad1 from '@/assets/ad1.png';
 import ad2 from '@/assets/ad2.png';
 import ad3 from '@/assets/ad3.png';
@@ -51,7 +51,7 @@ export default {
 
   methods: {
     fetchRandomBooks() {
-      axios.get('http://localhost:8081/api/books/random?count=3')
+      axios.get('/api/books/random?count=3')
         .then(response => {
           this.randomBooks = response.data.books;
         })
